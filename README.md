@@ -10,6 +10,12 @@ I am also a security researcher whose work tends to focus on the interplay betwe
 
 I do fear retaliation, both personal and professional, and I believe that being direct about my complaint and publishing my complaint is the safest path forward for myself and my family.
 
+I am aware that my colleagues fear retaliation, both personal and professional.
+
+And I think we have good reason to be afraid.
+
+In fact, the only reason I'm making this report is because I think that it is less risky to speak now, and speak fully, than to simply walk away.
+
 
 ## Business Stabby and Composable
 
