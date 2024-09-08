@@ -30,7 +30,15 @@ I watched Jack Zampolin and others associated with Strangelove Ventures, the tea
 
 
 
-##
+
+
+
+
+## Proposal 104
+
+* https://github.com/cosmos/interchain-security/issues/852
+
+
 
 
 ## P2P Storms
