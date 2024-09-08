@@ -6,7 +6,8 @@ My report to the Swiss FASF on the activities of the Interchain Foundation
 
 I'm Jacob Anthony Gadikian.  I've worked in Cosmos since about 2016, but I began to do full time work in the ecosystem in 2020.  I am the CEO and founder of Notional Ventures, which used to run 45 validators in the cosmos ecosystem.  
 
-I am a beneficiary of the ICF, as my validator nodes recieved delegations from them.
+* I am a beneficiary of the ICF, as my validator nodes recieved delegations from them.
+* My company was [elected as the security provider to the Cosmos Hub](https://www.mintscan.io/cosmos/proposals/104)
 
 All of the information here, I have presented to the ICF.  Yet, the ICF has taken no action on it.  As time has gone on, things have only grown worse, and 
 
@@ -25,7 +26,11 @@ In fact, the only reason I'm making this report is because I think that it is le
 
 ## Business Stabby and Composable
 
-I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC.  To date, Composable is the only team that has meaningfully grown the IBC network.  It has built IBC clients for both Cosmos and Polkadot, and 
+I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC.  To date, Composable is the only team that has meaningfully grown the IBC network.  Composable has built IBC clients for both Cosmos and Polkadot, and designed 08-Wasm, a client interface.  
+
+
+
+##
 
 
 ## P2P Storms
