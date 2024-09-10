@@ -77,7 +77,16 @@ I have deeply documented p2p storms in many ways, and have included PDF files he
 P2P Storms have been used to exploit Cosmos networks financially, including [Luna Classic](https://github.com/notional-labs/notional/blob/master/incidents/WTF%20HAPPENED%20TO%20TERRA.pdf) and [Osmosis](https://www.range.org/blog/levana-security-incident-in-depth-analysis).  The links contain information on both exploits.  Here is the chronology of exploits:
 
 * Game of Zones - 2020
-* Sentinel - 2021
+
+All cosmos hub game of zones participants noted this issue, yet it was not investigated.
+
+
+
+* [Sentinel - 2021](./p2pstorms/2023-08-15_report_1395694%20(1).pdf)
+
+
+
+
 * Luna Classic - May 2022
 * Stride - August 2023
 * Osmosis - December 2024
