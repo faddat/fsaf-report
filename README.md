@@ -7,6 +7,7 @@ If you have security issues, I strongly recommend that you go directly to [Dev O
 
 * You will be harasssed
 * Your issue will not be handled
+* You will incur economic losses due to your report
 
 For the P2P storms issue in particular, I needed to "disclose by demonstration", working in conjunction with SEAL911, an security reporting body of last resort.  I also needed to spend my company's money to make a legal threat to the interchain foundation, as they refused to remove my company's name from a provably inaccurate report they published concerning an issue involved in over $70,000,000,000 in economic losses.
 
