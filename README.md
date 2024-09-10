@@ -24,7 +24,19 @@ That is why I mentioned that fear in [Cosmos Hub Proposal 787](https://www.mints
 In fact, the only reason I'm making this report is because I think that it is less risky to speak now, and speak fully, than to simply walk away.
 
 
-## Business Stabby and Composable
+
+## Incidents
+
+Due to the fact that there have been exploits following several of my reports, it is hard for me to say if it is safe from a network security perspective to bring security issues to the Interchain Foundation.
+
+
+### Amulet And the Fee Market
+
+
+
+
+
+### Business Stabby and Composable
 
 I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC.  To date, Composable is the only team that has meaningfully grown the IBC network.  Composable has built IBC clients for both Cosmos and Polkadot, and designed 08-Wasm, a client interface.  
 
@@ -34,16 +46,24 @@ I watched Jack Zampolin and others associated with Strangelove Ventures, the tea
 
 
 
-## Proposal 104
+### Proposal 104
 
 * https://github.com/cosmos/interchain-security/issues/852
 
 
 
 
-## P2P Storms
+### P2P Storms
 
 
-## Amulet
+
+### Banana King
+
+
+### IBC Version 3.0.0 and the cosmos hub
+
+Contrary to repeated, totally false claims made by the Interchain Foundation, 
+
+
 
 
