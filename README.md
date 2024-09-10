@@ -1,5 +1,14 @@
 # fasf-report
-My report to the Swiss FASF on the activities of the Interchain Foundation
+My report to the Swiss FASF on the activities of the Interchain Foundation.
+
+I think that this information is also likely to benefit teams actively working in Cosmos.  
+
+If you have security issues, I strongly recommend that you go directly to [Dev Ojha](x.com/valardragon) who is extremely accomplished, ethical, and wonderful.  I cannot recommend that you contact the Interchain Foundation due to the risks that:
+
+* You will be harasssed
+* Your issue will not be handled
+
+For the P2P storms issue in particular, I needed to "disclose by demonstration", working in conjunction with SEAL911, an security reporting body of last resort.  I also needed to spend my company's money to make a legal threat to the interchain foundation, as they refused to remove my company's name from a provably inaccurate report they published concerning an issue involved in over $70,000,000,000 in economic losses.
 
 
 ## Who are you?
