@@ -102,6 +102,10 @@ My reports predate any of the financial exploits, and date back to [2021](./p2ps
 * Reported by x.com/@getcoldy to me 
 * Reported by me to ICF
 
+....and totally ignored for years until I opened an issue on the topic in public:
+
+* https://github.com/cosmos/ibc-go/issues/4859
+
 
 
 ### IBC Version 3.0.0 and the cosmos hub
