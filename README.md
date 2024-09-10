@@ -29,7 +29,7 @@ I am aware that my colleagues fear retaliation, both personal and professional.
 
 And I think we have good reason to be afraid.
 
-That is why I mentioned that fear in [Cosmos Hub Proposal 787](https://www.mintscan.io/cosmos/proposals/787)
+That is why I mentioned that fear in [Cosmos Hub Proposal 787](https://www.mintscan.io/cosmos/proposals/787), which I authored.
 
 In fact, the only reason I'm making this report is because I think that it is less risky to speak now, and speak fully, than to simply walk away.
 
@@ -41,6 +41,14 @@ Due to the fact that there have been exploits following several of my reports, i
 
 
 ### Amulet And the Fee Market
+
+Please see:
+
+* https://github.com/cosmos/gaia/issues/3319
+  * backed up at:
+    * https://github.com/faddat/fasf-report/issues 
+
+
 
 
 
@@ -65,7 +73,11 @@ I watched Jack Zampolin and others associated with Strangelove Ventures, the tea
 
 ### P2P Storms
 
-I have deeply document p2p storms in many ways, and have included PDF files here that describe it.  
+I have deeply document p2p storms in many ways, and have included PDF files here that describe it.  You can find those in the ./p2p-storms folder.
+
+
+
+* 
 
 
 
