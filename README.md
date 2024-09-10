@@ -55,12 +55,20 @@ I watched Jack Zampolin and others associated with Strangelove Ventures, the tea
 
 ### P2P Storms
 
+I have deeply document p2p storms in many ways, and have included PDF files here that describe it.  
+
 
 
 ### Banana King
 
+#### Lack of field length limitations in ibc
+
+* First reported by x.com/@ctrl_felix to the Interchain Foundation using their formal security reporitng process
+
 
 ### IBC Version 3.0.0 and the cosmos hub
+
+#### Use of deprecated module on cosmos hub, leading to an exploit of the cosmos hub that caused 30,000 ATOM of user funds to get stuck
 
 Contrary to repeated, totally false claims made by the Interchain Foundation, 
 
