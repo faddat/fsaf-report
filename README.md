@@ -73,11 +73,17 @@ I watched Jack Zampolin and others associated with Strangelove Ventures, the tea
 
 ### P2P Storms
 
-I have deeply document p2p storms in many ways, and have included PDF files here that describe it.  You can find those in the ./p2p-storms folder.
+I have deeply documented p2p storms in many ways, and have included PDF files here that describe it.  You can find those in the [p2p-storms](./p2pstorms/) folder.
+
+P2P Storms have been used to exploit Cosmos networks financially, including [Luna Classic](https://github.com/notional-labs/notional/blob/master/incidents/WTF%20HAPPENED%20TO%20TERRA.pdf) and [Osmosis](https://www.range.org/blog/levana-security-incident-in-depth-analysis).  The links contain information on both exploits.
+
+My reports predate any of the financial exploits, and date back to 2021.
 
 
 
-* 
+
+
+* https://www.range.org/blog/levana-security-incident-in-depth-analysis
 
 
 
@@ -85,7 +91,13 @@ I have deeply document p2p storms in many ways, and have included PDF files here
 
 #### Lack of field length limitations in ibc
 
-* First reported by x.com/@ctrl_felix to the Interchain Foundation using their formal security reporitng process
+
+**Reports**
+* First reported by x.com/@ctrl_felix to the Interchain Foundation using their formal security reporitng process.  
+  * ignored
+* Reported by x.com/@getcoldy to me 
+* Reported by me to ICF
+
 
 
 ### IBC Version 3.0.0 and the cosmos hub
