@@ -59,14 +59,13 @@ Please see:
 I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC.  To date, Composable is the only team that has meaningfully grown the IBC network.  Composable has built IBC clients for both Cosmos and Polkadot, and designed 08-Wasm, a client interface.  
 
 
-
-
-
-
-
 ### Proposal 104
 
+[Proposal 104]()
+
+
 * https://github.com/cosmos/interchain-security/issues/852
+
 
 
 
@@ -75,12 +74,17 @@ I watched Jack Zampolin and others associated with Strangelove Ventures, the tea
 
 I have deeply documented p2p storms in many ways, and have included PDF files here that describe it.  You can find those in the [p2p-storms](./p2pstorms/) folder.
 
-P2P Storms have been used to exploit Cosmos networks financially, including [Luna Classic](https://github.com/notional-labs/notional/blob/master/incidents/WTF%20HAPPENED%20TO%20TERRA.pdf) and [Osmosis](https://www.range.org/blog/levana-security-incident-in-depth-analysis).  The links contain information on both exploits.
+P2P Storms have been used to exploit Cosmos networks financially, including [Luna Classic](https://github.com/notional-labs/notional/blob/master/incidents/WTF%20HAPPENED%20TO%20TERRA.pdf) and [Osmosis](https://www.range.org/blog/levana-security-incident-in-depth-analysis).  The links contain information on both exploits.  Here is the chronology of exploits:
 
-My reports predate any of the financial exploits, and date back to 2021.
+* Game of Zones - 2020
+* Sentinel - 2021
+* Luna Classic - May 2022
+* Stride - August 2023
+* Osmosis - December 2024
 
+Only the exploits on 
 
-
+My reports predate any of the financial exploits, and date back to [2021](./p2pstorms/2023-08-15_report_1395694%20(1).pdf).
 
 
 * https://www.range.org/blog/levana-security-incident-in-depth-analysis
