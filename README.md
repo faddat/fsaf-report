@@ -54,7 +54,7 @@ Please see:
 
 
 
-### Business Stabby and Composable
+### Threats made (and carried out) towards ecosystem participants by Strangelove Ventures, funded by the ICF
 
 I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC.  To date, Composable is the only team that has meaningfully grown the IBC network.  Composable has built IBC clients for both Cosmos and Polkadot, and designed 08-Wasm, a client interface.  
 
