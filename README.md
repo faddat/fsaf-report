@@ -1,8 +1,10 @@
 # FSAF-report
 
-My report to the Swiss FASF on the activities of the Interchain Foundation.
+My report to the Swiss FSAF on the activities of the Interchain Foundation.
 
 I think that this information is also likely to benefit teams actively working in Cosmos.  
+
+## For security reporters in cosmos
 
 If you have security issues, I strongly recommend that you go directly to [Dev Ojha](x.com/valardragon) who is extremely accomplished, ethical, and wonderful.  I cannot recommend that you contact the Interchain Foundation due to the risks that:
 
