@@ -64,10 +64,15 @@ It is notable that the Security reporting process described on the Cosmos hub do
   * go to the section "a note on gaia"
   * Here is the versioned edition of the reporting standards for the hub:
     * https://hackerone.com/cosmos/policy_versions?change=3737220&type=team
+      * We can clearly see that the standards were modified after the report was made, and that Amulet attempted to say that the security issue was somehow Skip's fault (Skip is the third party that made the fee market module)
+        * At the time of the report, Joe Bowman tested Osmosis to see if the vulnerability was present there, but due to differences in how Osmosis integrated the fee market, it was not.
+          * This was a cosmos hub issue.
 
 ### Threats made (and carried out) towards ecosystem participants by Strangelove Ventures, funded by the ICF
 
 I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC.  To date, Composable is the only team that has meaningfully grown the IBC network.  Composable has built IBC clients for both Cosmos and Polkadot, and designed 08-Wasm, a client interface.  
+
+
 
 
 ### Proposal 104
