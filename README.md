@@ -1,4 +1,5 @@
 # fasf-report
+
 My report to the Swiss FASF on the activities of the Interchain Foundation.
 
 I think that this information is also likely to benefit teams actively working in Cosmos.  
@@ -11,19 +12,19 @@ If you have security issues, I strongly recommend that you go directly to [Dev O
 
 For the P2P storms issue in particular, I needed to "disclose by demonstration", working in conjunction with SEAL911, an security reporting body of last resort.  I also needed to spend my company's money to make a legal threat to the interchain foundation, as they refused to remove my company's name from a provably inaccurate report they published concerning an issue involved in over $70,000,000,000 in economic losses.
 
-
 ## Who are you?
 
 I'm Jacob Anthony Gadikian.  I've worked in Cosmos since about 2016, but I began to do full time work in the ecosystem in 2020.  I am the CEO and founder of Notional Ventures, which used to run 45 validators in the cosmos ecosystem.  
 
 * I am a direct and general beneficiary of the ICF, as my validator nodes recieved delegations from them, although this is not noted in the ICF's public facing delegation documents, which have commits only from Informal Systems team members:
-  * https://github.com/interchainio/delegation
+  * [ICF Delegation Information](https://github.com/interchainio/delegation)
+    * Authored by Informal Systems members
   * Notional recieved a delegation of over 800,000 atoms, and this yeilded revenue of around $60,000 a year.
 * My company was [elected as the security provider to the Cosmos Hub](https://www.mintscan.io/cosmos/proposals/104)
 
 As time has gone on, I have noticed that issues are becoming worse with reporting, instead of getting better.
 
-I am also a security researcher whose work tends to focus on the interplay between systems in cryptocurrency, and has been categorically denied by the Interchain foundation, despite ample proof.  I prefer to speak and act directly, so I am doing this in a public fashion, my report to the FASF is this repository.  I will speak to the FASF only over Signal, other than the initial e-mail that I send them with this repository and my signal contact information. 
+I am also a security researcher whose work tends to focus on the interplay between systems in cryptocurrency, and has been categorically denied by the Interchain foundation, despite ample proof.  I prefer to speak and act directly, so I am doing this in a public fashion, my report to the FASF is this repository.  I will speak to the FASF only over Signal, other than the initial e-mail that I send them with this repository and my signal contact information.
 
 I do fear retaliation, both personal and professional, and I believe that being direct about my complaint and publishing my complaint is the safest path forward for myself and my family.
 
@@ -35,19 +36,16 @@ That is why I mentioned that fear in [Cosmos Hub Proposal 787: Formally request 
 
 In fact, the only reason I'm making this report is because I think that it is less risky to speak now, and speak fully, than to simply walk away.
 
-
 ## Incidents
 
 Due to the fact that there have been exploits following several of my reports, it is hard for me to say if it is safe from a network security perspective to bring security issues to the Interchain Foundation.
-
 
 ### Amulet And the Fee Market
 
 Please see:
 
-* https://github.com/cosmos/gaia/issues/3319
-  * backed up at:
-    * https://github.com/faddat/fasf-report/issues 
+* [Issue on the Cosmos hub relating to the discrepancy between Amulet standards and the hub](https://github.com/cosmos/gaia/issues/3319)
+  * [backed up](https://github.com/faddat/fasf-report/issues)
 
 Amulet, the security contractor to the Interchain Foundation, changed their cosmos hub reporting policies after the submission of a bug report by Joe Bowman, to claim that the incident was not covered by their reporting policy.
 
@@ -86,6 +84,8 @@ I watched Jack Zampolin and others associated with Strangelove Ventures, the tea
 
 
 
+
+
 ### P2P Storms
 
 I have deeply documented p2p storms in many ways, and have included PDF files here that describe it.  You can find those in the [p2p-storms](./p2pstorms/) folder.
@@ -96,18 +96,15 @@ P2P Storms have been used to exploit Cosmos networks financially, including [Lun
 
 All cosmos hub game of zones participants noted this issue, yet it was not investigated.
 
-
-
 * [Sentinel - 2021](./p2pstorms/2023-08-15_report_1395694%20(1).pdf)
 
-
-
+The Report linked here references the precise set of issues present in p2p storms.
 
 * Luna Classic - May 2022
 * Stride - August 2023
 * Osmosis - December 2024
 
-Only the exploits on 
+Only the exploits on Luna and Osmosis were financially consequential, but it should be noted that a p2p storm is basically the ultimate form of deniable blockchain attack.  Since the transactions used are valid, it is impossible to prove much about these incidents except that they occured and were financially consequential.  Addressing this issue when it was first reported may have prevented or lessened the catastrophic impact of Luna's UST stablecoin failure.  Please note that this is not an argument that UST was in any way risk free, or a satisfactory product.  Much greater care should have been used in its construction.
 
 My reports predate any of the financial exploits, and date back to [2021](./p2pstorms/2023-08-15_report_1395694%20(1).pdf).
 
@@ -116,12 +113,11 @@ My reports predate any of the financial exploits, and date back to [2021](./p2ps
 
 
 
-### Banana King
-
-#### Lack of field length limitations in ibc
+### Banana King: Lack of field length limitations in ibc
 
 
-**Reports**
+#### Reports
+
 * First reported by x.com/@ctrl_felix to the Interchain Foundation using their formal security reporitng process.  
   * ignored
 * Reported by x.com/@getcoldy to me 
@@ -135,16 +131,11 @@ Banana king could be used to execute p2p storms style attacks, and the window to
 
 Banana king did not result in any financial losses, but many cosmos chains remain vulnerable to it today.  Mainly banana king allows for attacks on timing.
 
-
-
 ### IBC Version 3.0.0 and the cosmos hub
 
 #### Use of deprecated module on cosmos hub, leading to an exploit of the cosmos hub that caused 30,000 ATOM of user funds to get stuck
 
-Contrary to repeated, totally false claims made by the Interchain Foundation, the cosmos hub has been successfully exploited, with financial consequence for users (inability to access funds).
+Contrary to repeated, totally false claims made by the Interchain Foundation, the cosmos hub has been successfully exploited, with financial consequence for users (inability to access funds).  This happened two weeks after I reported to both ICF and Informal Systems that the Cosmos Hub was using an obsolente version of IBC that was tagged as `deprecated` because:
 
-
-
-
-
-
+* It was subject to the `Dragonberry` vulnerability
+* It allowed ICA channels to be created only by using the counterparty's module name, enabling an attacker to block the creation of the ICA channel.
