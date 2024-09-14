@@ -57,34 +57,25 @@ Here is a link to their versioned reporting policy, where it can be seen that ch
 
 It is notable that the Security reporting process described on the Cosmos hub does not match the one described by Amulet:
 
-* https://github.com/cosmos/gaia/blob/main/SECURITY.md
-* https://hackerone.com/cosmos?type=team
+* [Cosmos Hub Security Docs](https://github.com/cosmos/gaia/blob/main/SECURITY.md)
+* [Amulet / HackerOne Security Docs](https://hackerone.com/cosmos?type=team)
   * go to the section "a note on gaia"
-  * Here is the versioned edition of the reporting standards for the hub:
-    * https://hackerone.com/cosmos/policy_versions?change=3737220&type=team
-      * We can clearly see that the standards were modified after the report was made, and that Amulet attempted to say that the security issue was somehow Skip's fault (Skip is the third party that made the fee market module)
-        * At the time of the report, Joe Bowman tested Osmosis to see if the vulnerability was present there, but due to differences in how Osmosis integrated the fee market, it was not.
-          * This was a cosmos hub issue.
+  * Here is the [versioned edition](https://hackerone.com/cosmos/policy_versions?change=3737220&type=team) of the reporting standards for the hub:
+    * We can clearly see that the standards were modified after the report was made, and that Amulet attempted to say that the security issue was somehow Skip's fault (Skip is the third party that made the fee market module)
+      * At the time of the report, Joe Bowman tested Osmosis to see if the vulnerability was present there, but due to differences in how Osmosis integrated the fee market, it was not.
+        * This was a cosmos hub issue.
 
 ### Threats made (and carried out) towards ecosystem participants by Strangelove Ventures, funded by the ICF
 
-I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC.  To date, Composable is the only team that has meaningfully grown the IBC network.  Composable has built IBC clients for both Cosmos and Polkadot, and designed 08-Wasm, a client interface.  
-
-
-
+I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC via composable specifically.  To date, Composable is the only team that has meaningfully grown the IBC network.  Composable has built IBC clients for both Cosmos and Polkadot, and designed 08-Wasm, a client interface.  
 
 ### Proposal 104
 
-[Proposal 104]()
+[Proposal 104](https://www.mintscan.io/cosmos/proposals/104)
 
+Proposal 104 selected my company, Notional, as the security provider to the Cosmos hub.  
 
 * https://github.com/cosmos/interchain-security/issues/852
-
-
-
-
-
-
 
 ### P2P Storms
 
@@ -108,13 +99,9 @@ Only the exploits on Luna and Osmosis were financially consequential, but it sho
 
 My reports predate any of the financial exploits, and date back to [2021](./p2pstorms/2023-08-15_report_1395694%20(1).pdf).
 
-
 * https://www.range.org/blog/levana-security-incident-in-depth-analysis
 
-
-
 ### Banana King: Lack of field length limitations in ibc
-
 
 #### Reports
 
@@ -125,7 +112,19 @@ My reports predate any of the financial exploits, and date back to [2021](./p2ps
 
 ....and totally ignored for years until I opened an issue on the topic in public:
 
-* https://github.com/cosmos/ibc-go/issues/4859
+* [Lack of Field Length Limitations in IBC](https://github.com/cosmos/ibc-go/issues/4859)
+
+Myself and other reporters avoided making any comments in public, althought an analyst later found the issue:
+
+* [Web3 Analyst](https://x.com/web3_analyst/status/1635687287962112000)
+
+Later, I met Jessica in person and we discussed both Banana King and p2p Storms:
+
+* [Inteview with Jessica](https://x.com/gadikian/status/1822265519304569057)
+
+The content of IBC messages that exhibited banana king surpasses any reasonable bounds:
+
+* [Example Banana King tx](https://www.mintscan.io/osmosis/tx/D62F0F0354C4DEA0D9DFCA596D9BC3F2943DBA7D24818009DFD725F883088DD0)
 
 Banana king could be used to execute p2p storms style attacks, and the window to execute banana king attacks was left open by the Interchain foundation despite multiple reports, in a similar manner to the issues in P2P storms itself, and the submission of an initial patch in 2022.
 
