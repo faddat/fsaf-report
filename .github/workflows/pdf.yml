@@ -3,6 +3,7 @@ name: Convert README to PDF
 on:
   push:
   pull_request:
+    branches: main
   workflow_dispatch:
 
 jobs:
@@ -10,12 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v2
         with:
-          node-version: "20"
+          node-version: "14"
 
       - name: Install dependencies
         run: |
@@ -28,7 +31,7 @@ jobs:
           md-to-pdf README.md --config-file pdf-config.json
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
           name: FSAF_Report
           path: README.pdf
@@ -39,4 +42,4 @@ jobs:
           git config --local user.name "GitHub Action"
           git add README.pdf
           git commit -m "Update PDF version of README" -a || exit 0
-          git push
+          git push origin HEAD:${GITHUB_REF#refs/heads/}
