@@ -2,8 +2,11 @@ name: Convert README to PDF
 
 on:
   push:
-    paths:
-      - "README.md"
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
