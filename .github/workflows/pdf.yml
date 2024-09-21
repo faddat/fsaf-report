@@ -1,0 +1,43 @@
+name: Convert README to PDF
+
+on:
+  push:
+    paths:
+      - 'README.md'
+  workflow_dispatch:
+
+jobs:
+  convert_to_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-liberation
+          npm install -g md-to-pdf
+
+      - name: Convert README to PDF
+        run: |
+          md-to-pdf README.md --config-file pdf-config.json
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: FASF_Letter
+          path: README.pdf
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.pdf
+          git commit -m "Update PDF version of README" -a || exit 0
+          git push
