@@ -79,6 +79,10 @@ Proposal 104 selected my company, Notional, as the security provider to the Cosm
 
 * https://github.com/cosmos/interchain-security/issues/852
 
+During the time that Notional was the security provider to the cosmos hub, members of the Informal Systems team refused to update the Hub's security contact information. 
+
+As such, security issues were not reported to the team working on the hub's security.
+
 ### P2P Storms
 
 I have deeply documented p2p storms in many ways, and have included PDF files here that describe it.  You can find those in the [p2p-storms](./p2pstorms/) folder.
