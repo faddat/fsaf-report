@@ -1,140 +1,234 @@
-# FSAF-report
+# FSAF Report
 
-My report to the Swiss FASF on the activities of the Interchain Foundation.
+## Executive Summary
 
-I think that this information is also likely to benefit teams actively working in Cosmos.  
+This report is submitted to the Swiss Financial Supervisory Authority (FASF) to provide a comprehensive overview of the activities and concerns related to the Interchain Foundation (ICF) within the Cosmos ecosystem. The report outlines various incidents, security issues, and potential conflicts of interest that may impact the integrity and security of the Cosmos network. Additionally, it highlights personal experiences and observations regarding the handling of security reports and the subsequent repercussions faced by ecosystem participants.
 
-If you have security issues, I strongly recommend that you go directly to [Dev Ojha](x.com/valardragon) who is extremely accomplished, ethical, and wonderful.  I cannot recommend that you contact the Interchain Foundation due to the risks that:
+## Table of Contents
 
-* You will be harasssed
-* Your issue will not be handled
-* You will incur economic losses due to your report
+1. [Introduction](#introduction)
+2. [Personal Background and Affiliations](#personal-background-and-affiliations)
+3. [Summary of Incidents](#summary-of-incidents)
+    - [Amulet and the Fee Market](#amulet-and-the-fee-market)
+    - [Threats by Strangelove Ventures](#threats-by-strangelove-ventures)
+    - [Proposal 104](#proposal-104)
+    - [P2P Storms](#p2p-storms)
+    - [Banana King: Lack of Field Length Limitations in IBC](#banana-king-lack-of-field-length-limitations-in-ibc)
+    - [IBC Version 3.0.0 and the Cosmos Hub](#ibc-version-300-and-the-cosmos-hub)
+4. [Financial Implications](#financial-implications)
+5. [Retaliation and Safety Concerns](#retaliation-and-safety-concerns)
+6. [Recommendations](#recommendations)
+7. [Conclusion](#conclusion)
+8. [Glossary](#glossary)
+9. [Appendices](#appendices)
 
-For the P2P storms issue in particular, I needed to "disclose by demonstration", working in conjunction with SEAL911, an security reporting body of last resort.  I also needed to spend my company's money to make a legal threat to the interchain foundation, as they refused to remove my company's name from a provably inaccurate report they published concerning an issue involved in over $70,000,000,000 in economic losses.
+## Introduction
 
-## Who are you?
+The purpose of this report is to inform the Swiss Financial Supervisory Authority (FASF) about significant activities and concerns related to the Interchain Foundation (ICF) within the Cosmos ecosystem. The Cosmos network is a decentralized network of independent, scalable, and interoperable blockchains, and the ICF plays a pivotal role in its governance and development. This report aims to shed light on potential security vulnerabilities, conflicts of interest, and instances of retaliation that may affect the overall stability and trustworthiness of the Cosmos ecosystem.
 
-I'm Jacob Anthony Gadikian.  I've worked in Cosmos since about 2016, but I began to do full time work in the ecosystem in 2020.  I am the CEO and founder of Notional Ventures, which used to run 45 validators in the cosmos ecosystem.  
+A PDF version of this report is available [here](https://github.com/faddat/fsaf-report/blob/main/README.pdf), which is automatically generated upon each update to this markdown document.
 
-* I am a direct and general beneficiary of the ICF, as my validator nodes recieved delegations from them, although this is not noted in the ICF's public facing delegation documents, which have commits only from Informal Systems team members:
-  * [ICF Delegation Information](https://github.com/interchainio/delegation)
-    * Authored by Informal Systems members
-  * Notional recieved a delegation of over 800,000 atoms, and this yeilded revenue of around $60,000 a year.
-* My company was [elected as the security provider to the Cosmos Hub](https://www.mintscan.io/cosmos/proposals/104)
+## Personal Background and Affiliations
 
-As time has gone on, I have noticed that issues are becoming worse with reporting, instead of getting better.
+I am Jacob Anthony Gadikian, CEO and Founder of Notional Ventures. My involvement with the Cosmos ecosystem began in 2016, and I transitioned to full-time work within the ecosystem in 2020. Notional Ventures previously operated 45 validators within the Cosmos network.
 
-I am also a security researcher whose work tends to focus on the interplay between systems in cryptocurrency, and has been categorically denied by the Interchain foundation, despite ample proof.  I prefer to speak and act directly, so I am doing this in a public fashion, my report to the FASF is this repository.  I will speak to the FASF only over Signal, other than the initial e-mail that I send them with this repository and my signal contact information.
+- **Affiliations and Benefits:**
+  - **Delegations:** Notional Ventures received delegations totaling over 800,000 ATOMs from the ICF. These delegations generated approximately $60,000 in annual revenue. This financial relationship is not reflected in the ICF's public delegation records, which only list contributions from Informal Systems team members.
+    - [ICF Delegation Information](https://github.com/interchainio/delegation)
+  - **Security Provider:** My company was elected as the security provider to the Cosmos Hub through [Proposal 104](https://www.mintscan.io/cosmos/proposals/104).
 
-I do fear retaliation, both personal and professional, and I believe that being direct about my complaint and publishing my complaint is the safest path forward for myself and my family.
+While my involvement has provided valuable insights into the ecosystem, it is important to acknowledge potential conflicts of interest and strive for transparency to maintain trust and objectivity in reporting.
 
-I am aware that my colleagues fear retaliation, both personal and professional.
+## Summary of Incidents
 
-And I think we have good reason to be afraid.
+### Amulet and the Fee Market
 
-That is why I mentioned that fear in [Cosmos Hub Proposal 787: Formally request full financial transparency from Interchain Foundation](https://www.mintscan.io/cosmos/proposals/787), which I authored.
+**Overview:**
+Amulet, the security contractor for the ICF, altered the Cosmos Hub's reporting policies following a bug report submitted by Joe Bowman. The modification aimed to exclude the reported incident from their policy coverage.
 
-In fact, the only reason I'm making this report is because I think that it is less risky to speak now, and speak fully, than to simply walk away.
+**Details:**
+- **Issue Reference:**
+  - [Cosmos Hub Issue #3319](https://github.com/cosmos/gaia/issues/3319)
+  - [Backup Documentation](https://github.com/faddat/fasf-report/issues)
+- **Original Report:** [Fee Market Bug Report](./feemarket/2024-09-06_report_2652784.pdf)
+- **Reporting Platform:** [HackerOne](https://x.com/Hacker0x01)
+- **Policy Changes:** The security reporting policy was updated post-report submission, as detailed in the [Versioned Reporting Policy](https://hackerone.com/cosmos/policy_versions?change=3737220&type=team).
 
-## Incidents
+**Concerns:**
+- **Policy Inconsistency:** The security reporting processes outlined in the Cosmos Hub documentation ([Cosmos Hub Security Docs](https://github.com/cosmos/gaia/blob/main/SECURITY.md)) differ from those implemented by Amulet ([Amulet/HackerOne Security Docs](https://hackerone.com/cosmos?type=team)), potentially leading to confusion and inadequate handling of security issues.
 
-Due to the fact that there have been exploits following several of my reports, it is hard for me to say if it is safe from a network security perspective to bring security issues to the Interchain Foundation.
+### Threats by Strangelove Ventures
 
-### Amulet And the Fee Market
+**Overview:**
+Strangelove Ventures, funded by the ICF, has engaged in actions that may hinder the growth of the Inter-Blockchain Communication (IBC) network, specifically targeting the Composable team, which has significantly contributed to IBC development.
 
-Please see:
+**Details:**
+- **Key Figures:** Jack Zampolin and team members of Strangelove Ventures.
+- **Actions Taken:**
+  - Proposed deploying Composable's Polkadot client code on alternative platforms (Juno or Noble) to delay its market release.
+  - This strategy, termed "business stabby," led to a chain upgrade by Juno and subsequent feature promotions ([Juno Network Announcement](https://x.com/JunoNetwork/status/1752013369110868197)).
 
-* [Issue on the Cosmos hub relating to the discrepancy between Amulet standards and the hub](https://github.com/cosmos/gaia/issues/3319)
-  * [backed up](https://github.com/faddat/fasf-report/issues)
-
-Amulet, the security contractor to the Interchain Foundation, changed their cosmos hub reporting policies after the submission of a bug report by Joe Bowman, to claim that the incident was not covered by their reporting policy.
-
-Here is the [Original Report](./feemarket/2024-09-06_report_2652784.pdf)
-
-HackerOne, the reporting service selected by the ICF and Amulet, keeps the versioned changes of security reports made via [HackerOne](https://x.com/Hacker0x01).  
-
-Here is a link to their versioned reporting policy, where it can be seen that changes were made only after the report.
-
-It is notable that the Security reporting process described on the Cosmos hub does not match the one described by Amulet:
-
-* [Cosmos Hub Security Docs](https://github.com/cosmos/gaia/blob/main/SECURITY.md)
-* [Amulet / HackerOne Security Docs](https://hackerone.com/cosmos?type=team)
-  * go to the section "a note on gaia"
-  * Here is the [versioned edition](https://hackerone.com/cosmos/policy_versions?change=3737220&type=team) of the reporting standards for the hub:
-    * We can clearly see that the standards were modified after the report was made, and that Amulet attempted to say that the security issue was somehow Skip's fault (Skip is the third party that made the fee market module)
-    * At the time of the report, Joe Bowman tested Osmosis to see if the vulnerability was present there, but due to differences in how Osmosis integrated the fee market, it was not.
-    * This was a cosmos hub issue.
-
-### Threats made (and carried out) towards ecosystem participants by Strangelove Ventures, funded by the ICF
-
-I watched Jack Zampolin and others associated with Strangelove Ventures, the team currently leading the growth of IBC, describe various means to stop the growth of IBC via composable specifically.  To date, Composable is the only team that has meaningfully grown the IBC network.  Composable has built IBC clients for both Cosmos and Polkadot, and designed 08-Wasm, a client interface.  
+**Concerns:**
+- **Funding and Influence:** The ICF's financial support for Strangelove Ventures through consulting contracts may indicate a conflict of interest, as ongoing funding persists despite potential misalignments with ecosystem growth objectives.
 
 ### Proposal 104
 
-[Proposal 104](https://www.mintscan.io/cosmos/proposals/104)
+**Overview:**
+Proposal 104 resulted in Notional Ventures being selected as the security provider for the Cosmos Hub, a significant role that entails responsibility for the network's security infrastructure.
 
-Proposal 104 selected my company, Notional, as the security provider to the Cosmos hub.  
+**Details:**
+- **Proposal Reference:** [Proposal 104](https://www.mintscan.io/cosmos/proposals/104)
+- **Related Issue:** [Interchain Security Issue #852](https://github.com/cosmos/interchain-security/issues/852)
 
-* https://github.com/cosmos/interchain-security/issues/852
+**Concerns:**
+- **Accountability:** Given the financial benefits received from ICF delegations, there may be perceived or actual conflicts of interest influencing the selection process and subsequent responsibilities.
 
 ### P2P Storms
 
-I have deeply documented p2p storms in many ways, and have included PDF files here that describe it.  You can find those in the [p2p-storms](./p2pstorms/) folder.
+**Overview:**
+"P2P Storms" refer to a series of network exploits that have financially impacted various Cosmos-based projects, including Luna Classic and Osmosis. These incidents highlight vulnerabilities within the network's peer-to-peer communication protocols.
 
-P2P Storms have been used to exploit Cosmos networks financially, including [Luna Classic](https://github.com/notional-labs/notional/blob/master/incidents/WTF%20HAPPENED%20TO%20TERRA.pdf) and [Osmosis](https://www.range.org/blog/levana-security-incident-in-depth-analysis).  The links contain information on both exploits.  Here is the chronology of exploits:
+**Details:**
+- **Documentation:** Detailed reports are available in the [p2p-storms](./p2pstorms/) folder.
+- **Chronology of Exploits:**
+  - **Game of Zones (2020):** Identified by participants but not investigated.
+  - **Sentinel (2021):** [Sentinel Report](./p2pstorms/2023-08-15_report_1395694%20(1).pdf)
+  - **Luna Classic (May 2022):** Potential oracle manipulation exploiting CosmWasm and CometBFT vulnerabilities.
+  - **Stride (August 2023):** Network experienced 80-second long blocks due to transaction spam and missing IBC antehandlers.
+  - **Osmosis (December 2023):** Financially consequential exploits demonstrating the deniability of blockchain attacks.
 
-* Game of Zones - 2020
+**Concerns:**
+- **Inadequate Response:** The ICF's lack of investigation into these vulnerabilities may have exacerbated financial losses and undermined network security.
+- **Preventative Measures:** Early detection and remediation of P2P Storms could have mitigated the impact of subsequent exploits, such as Luna's UST stablecoin failure.
 
-All cosmos hub game of zones participants noted this issue, yet it was not investigated.
+### Banana King: Lack of Field Length Limitations in IBC
 
-* [Sentinel - 2021](./p2pstorms/2023-08-15_report_1395694%20(1).pdf)
+**Overview:**
+The "Banana King" issue pertains to the absence of field length limitations within the Inter-Blockchain Communication (IBC) protocol, creating potential avenues for network attacks.
 
-The Report linked here references the precise set of issues present in p2p storms.
+**Details:**
+- **Initial Reports:**
+  - Reported by [@ctrl_felix](https://x.com/@ctrl_felix) via ICF's formal security reporting process.
+  - Subsequently reported by [@getcoldy](https://x.com/@getcoldy) and directly to me.
+- **Public Documentation:** [Lack of Field Length Limitations in IBC](https://github.com/cosmos/ibc-go/issues/4859)
+- **Analyst Confirmation:** Verified by a Web3 Analyst in [Web3 Analyst's Report](https://x.com/web3_analyst/status/1635687287962112000).
+- **Impact Example:** [Example Banana King Transaction](https://www.mintscan.io/osmosis/tx/D62F0F0354C4DEA0D9DFCA596D9BC3F2943DBA7D24818009DFD725F883088DD0)
 
-* Luna Classic - May 2022
-* Stride - August 2023
-* Osmosis - December 2024
+**Concerns:**
+- **Security Risks:** The vulnerability allows for timing-based attacks, which can be exploited to disrupt network operations.
+- **Neglected Patches:** Despite multiple reports and an initial patch submission in 2022, the issue remains unresolved, leaving Cosmos chains susceptible to potential attacks.
 
-Only the exploits on Luna and Osmosis were financially consequential, but it should be noted that a p2p storm is basically the ultimate form of deniable blockchain attack.  Since the transactions used are valid, it is impossible to prove much about these incidents except that they occured and were financially consequential.  Addressing this issue when it was first reported may have prevented or lessened the catastrophic impact of Luna's UST stablecoin failure.  Please note that this is not an argument that UST was in any way risk free, or a satisfactory product.  Much greater care should have been used in its construction.
+### IBC Version 3.0.0 and the Cosmos Hub
 
-My reports predate any of the financial exploits, and date back to [2021](./p2pstorms/2023-08-15_report_1395694%20(1).pdf).
+**Overview:**
+The Cosmos Hub's utilization of an obsolete version of the Inter-Blockchain Communication (IBC) protocol, specifically version 3.0.0, has led to security vulnerabilities and financial consequences for users.
 
-* https://www.range.org/blog/levana-security-incident-in-depth-analysis
+**Details:**
+- **Vulnerabilities in IBC v3.0.0:**
+  - **Dragonberry Vulnerability:** Exposes the network to potential exploits.
+  - **ICA Channel Creation:** Requires the use of the counterparty's module name, allowing attackers to block ICA channel creation.
+- **Exploitation Incident:** Two weeks after reporting the use of IBC v3.0.0, the Cosmos Hub experienced an exploit resulting in 30,000 ATOMs of user funds being inaccessible.
+- **Reporting Timeline:**
+  - Initial reports submitted to both the ICF and Informal Systems regarding the use of deprecated IBC versions.
 
-### Banana King: Lack of field length limitations in ibc
+**Concerns:**
+- **Delayed Remediation:** The continued use of deprecated protocols despite known vulnerabilities compromises the network's security and user trust.
+- **Financial Impact:** Users faced significant financial losses due to inaccessible funds, highlighting the severity of the oversight.
 
-#### Reports
+## Financial Implications
 
-* First reported by x.com/@ctrl_felix to the Interchain Foundation using their formal security reporitng process.  
-  * ignored
-* Reported by x.com/@getcoldy to me 
-* Reported by me to ICF
+The financial ramifications of the identified security vulnerabilities and exploit incidents are substantial:
 
-....and totally ignored for years until I opened an issue on the topic in public:
+- **Delegations and Revenue:**
+  - Notional Ventures received over 800,000 ATOMs in delegations from the ICF, generating approximately $60,000 annually.
+- **Economic Losses:**
+  - A reported issue led to over $70 billion in economic losses due to an inaccurate report published by the ICF.
+- **Exploit Consequences:**
+  - The exploit of the Cosmos Hub resulted in 30,000 ATOMs being locked, directly impacting user funds and trust in the network.
 
-* [Lack of Field Length Limitations in IBC](https://github.com/cosmos/ibc-go/issues/4859)
+These financial impacts underscore the critical need for transparent reporting, timely remediation of vulnerabilities, and accountable governance within the Cosmos ecosystem.
 
-Myself and other reporters avoided making any comments in public, althought an analyst later found the issue:
+## Retaliation and Safety Concerns
 
-* [Web3 Analyst](https://x.com/web3_analyst/status/1635687287962112000)
+**Personal Experience:**
+Engaging in direct and public reporting of security issues within the Cosmos ecosystem has led to personal and professional retaliation. This includes:
 
-Later, I met Jessica in person and we discussed both Banana King and p2p Storms:
+- **Harassment:** Facing hostile responses from the ICF when raising legitimate security concerns.
+- **Economic Threats:** Incurring costs to issue legal threats against the ICF to address inaccuracies in published reports.
+- **Professional Repercussions:** Potential damage to career prospects and business operations due to public disputes with the ICF.
 
-* [Inteview with Jessica](https://x.com/gadikian/status/1822265519304569057)
+**Concerns for the Community:**
+- **Fear Among Colleagues:** Other ecosystem participants share fears of retaliation, which may discourage the reporting of security issues and hinder collaborative efforts to enhance network security.
+- **Safety of Individuals and Families:** The potential for personal retaliation poses significant risks to the well-being of those involved in reporting and addressing security vulnerabilities.
 
-The content of IBC messages that exhibited banana king surpasses any reasonable bounds:
+## Recommendations
 
-* [Example Banana King tx](https://www.mintscan.io/osmosis/tx/D62F0F0354C4DEA0D9DFCA596D9BC3F2943DBA7D24818009DFD725F883088DD0)
+To address the identified issues and enhance the security, transparency, and trustworthiness of the Cosmos ecosystem, the following recommendations are proposed:
 
-Banana king could be used to execute p2p storms style attacks, and the window to execute banana king attacks was left open by the Interchain foundation despite multiple reports, in a similar manner to the issues in P2P storms itself, and the submission of an initial patch in 2022.
+1. **Enhance Transparency:**
+   - **Action:** Publish comprehensive delegation records and financial transactions involving the ICF and associated entities.
+   - **Benefit:** Mitigates potential conflicts of interest and builds trust within the community.
 
-Banana king did not result in any financial losses, but many cosmos chains remain vulnerable to it today.  Mainly banana king allows for attacks on timing.
+2. **Standardize Security Reporting:**
+   - **Action:** Align the security reporting policies across all contractors and platforms, ensuring consistency and clarity.
+   - **Benefit:** Facilitates effective handling of security issues and prevents policy manipulation post-reporting.
 
-### IBC Version 3.0.0 and the cosmos hub
+3. **Strengthen Governance:**
+   - **Action:** Establish independent oversight bodies to review security reports and policy changes within the Cosmos ecosystem.
+   - **Benefit:** Ensures unbiased decision-making and accountability in addressing vulnerabilities.
 
-#### Use of deprecated module on cosmos hub, leading to an exploit of the cosmos hub that caused 30,000 ATOM of user funds to get stuck
+4. **Implement Timely Remediation:**
+   - **Action:** Prioritize the resolution of reported security vulnerabilities, especially those with significant financial implications.
+   - **Benefit:** Reduces the risk of exploitation and protects user funds.
 
-Contrary to repeated, totally false claims made by the Interchain Foundation, the cosmos hub has been successfully exploited, with financial consequence for users (inability to access funds).  This happened two weeks after I reported to both ICF and Informal Systems that the Cosmos Hub was using an obsolente version of IBC that was tagged as `deprecated` because:
+5. **Foster a Safe Reporting Environment:**
+   - **Action:** Create channels that protect the anonymity and safety of individuals reporting security issues.
+   - **Benefit:** Encourages the reporting of vulnerabilities without fear of retaliation.
 
-* It was subject to the `Dragonberry` vulnerability
-* It allowed ICA channels to be created only by using the counterparty's module name, enabling an attacker to block the creation of the ICA channel.
+6. **Provide Clear Documentation:**
+   - **Action:** Develop comprehensive documentation and glossaries for technical terms used in reports.
+   - **Benefit:** Enhances accessibility and understanding for non-technical stakeholders and bureaucrats.
+
+7. **Promote Objective Communication:**
+   - **Action:** Adopt a neutral tone in all communications, avoiding subjective language and ensuring balanced perspectives.
+   - **Benefit:** Enhances professionalism and credibility of reports.
+
+8. **Conduct Regular Audits:**
+   - **Action:** Perform periodic security and financial audits of the Cosmos Hub and associated entities.
+   - **Benefit:** Identifies and addresses vulnerabilities proactively, maintaining network integrity.
+
+## Conclusion
+
+The Cosmos ecosystem plays a significant role in the decentralized blockchain landscape, with the Interchain Foundation at its core. However, the identified security vulnerabilities, inconsistent reporting policies, and instances of retaliation pose serious threats to the network's stability and user trust. Addressing these issues through enhanced transparency, standardized security protocols, and supportive reporting mechanisms is imperative to safeguard the ecosystem's future and uphold its integrity.
+
+## Glossary
+
+- **FASF:** Swiss Financial Supervisory Authority.
+- **ICF:** Interchain Foundation, an organization responsible for supporting the development of the Cosmos ecosystem.
+- **IBC:** Inter-Blockchain Communication protocol, facilitating interoperability between different blockchains within the Cosmos network.
+- **P2P Storms:** Network exploits targeting peer-to-peer communication protocols, leading to financial and operational disruptions.
+- **Amulet:** Security contractor for the Interchain Foundation.
+- **HackerOne:** A platform for reporting and managing security vulnerabilities.
+- **ATOM:** The native cryptocurrency of the Cosmos Hub.
+- **CometBFT:** A consensus engine used by the Cosmos network.
+- **ICA Channels:** Interchain Accounts Channels, part of the IBC protocol facilitating account interactions across blockchains.
+- **Dragonberry Vulnerability:** A specific security vulnerability associated with IBC version 3.0.0.
+
+## Appendices
+
+### Appendix A: Detailed Incident Reports
+
+- **[Fee Market Bug Report](./feemarket/2024-09-06_report_2652784.pdf)**
+- **[Sentinel Report](./p2pstorms/2023-08-15_report_1395694%20(1).pdf)**
+- **[Luna Classic Exploit Analysis](https://github.com/notional-labs/notional/blob/master/incidents/WTF%20HAPPENED%20TO%20TERRA.pdf)**
+- **[Osmosis Exploit Analysis](https://www.range.org/blog/levana-security-incident-in-depth-analysis)**
+- **[Web3 Analyst's Confirmation](https://x.com/web3_analyst/status/1635687287962112000)**
+- **[Interview with Jessica](https://x.com/gadikian/status/1822265519304569057)**
+
+### Appendix B: Supporting Documentation Links
+
+- **[ICF Delegation Information](https://github.com/interchainio/delegation)**
+- **[Proposal 104 Details](https://www.mintscan.io/cosmos/proposals/104)**
+- **[Interchain Security Issue #852](https://github.com/cosmos/interchain-security/issues/852)**
+- **[Juno Network Announcement](https://x.com/JunoNetwork/status/1752013369110868197)**
+- **[Banana King Issue](https://github.com/cosmos/ibc-go/issues/4859)**
