@@ -62,8 +62,8 @@ It is notable that the Security reporting process described on the Cosmos hub do
   * go to the section "a note on gaia"
   * Here is the [versioned edition](https://hackerone.com/cosmos/policy_versions?change=3737220&type=team) of the reporting standards for the hub:
     * We can clearly see that the standards were modified after the report was made, and that Amulet attempted to say that the security issue was somehow Skip's fault (Skip is the third party that made the fee market module)
-      * At the time of the report, Joe Bowman tested Osmosis to see if the vulnerability was present there, but due to differences in how Osmosis integrated the fee market, it was not.
-        * This was a cosmos hub issue.
+    * At the time of the report, Joe Bowman tested Osmosis to see if the vulnerability was present there, but due to differences in how Osmosis integrated the fee market, it was not.
+    * This was a cosmos hub issue.
 
 ### Threats made (and carried out) towards ecosystem participants by Strangelove Ventures, funded by the ICF
 
