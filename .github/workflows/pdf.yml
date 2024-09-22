@@ -30,16 +30,21 @@ jobs:
         run: |
           pandoc README.md -o README.pdf --pdf-engine=xelatex -V geometry:"top=2cm, bottom=2cm, left=2cm, right=2cm" -V colorlinks=true -V linkcolor=blue -V urlcolor=blue -V toccolor=gray
 
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: FSAF_Report
-          path: README.pdf
-
       - name: Commit and push if changed
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.pdf
-          git commit -m "Update PDF version of README" -a || exit 0
-          git push origin HEAD:${GITHUB_REF#refs/heads/}
+            git config --local user.name "GitHub Action"
+            git add README.pdf
+            git commit -m "Update PDF version of README" -a || exit 0
+            if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+              echo "Skipping push for pull request"
+            else
+              git push
+            fi
+
+      - name: Upload PDF for pull requests
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: README_PDF
+          path: README.pdf
