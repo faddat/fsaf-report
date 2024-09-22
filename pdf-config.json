@@ -1,16 +1,19 @@
 {
-  "stylesheet": "body { font-family: 'Liberation Serif', serif; font-size: 12pt; line-height: 1.5; } h1 { color: #003366; } h2 { color: #0056b3; } a { color: #0056b3; }",
-  "css": "body { padding: 70px; } @page { size: A4; margin: 0; }",
-  "body_class": "markdown-body",
+  "css": "@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); body { font-family: 'Merriweather', serif; font-size: 11pt; line-height: 1.5; padding: 1in; max-width: 6.5in; margin: 0 auto; color: #333; } h1 { font-size: 16pt; color: #1a1a1a; margin-top: 0.5in; } h2 { font-size: 14pt; color: #333; margin-top: 0.3in; } a { color: #0056b3; text-decoration: none; } p { margin-bottom: 0.2in; text-align: justify; } ul, ol { margin-bottom: 0.2in; padding-left: 0.3in; } li { margin-bottom: 0.1in; } @page { size: A4; margin: 0.75in 1in; }",
+  "body_class": "formal-letter",
   "marked_options": {
     "smartypants": true
   },
   "pdf_options": {
     "format": "A4",
-    "margin": "30mm 20mm",
     "printBackground": true,
-    "headerTemplate": "<style>section { margin: 0 auto; font-family: system-ui; font-size: 8pt; }</style><section><span class='date'></span></section>",
-    "footerTemplate": "<style>section { margin: 0 auto; font-family: system-ui; font-size: 8pt; }</style><section><div>Page <span class='pageNumber'></span> of <span class='totalPages'></span></div></section>"
-  },
-  "stylesheet_encoding": "utf-8"
+    "margin": {
+      "top": "0.75in",
+      "bottom": "0.75in",
+      "left": "1in",
+      "right": "1in"
+    },
+    "headerTemplate": "<style>section { font-family: 'Merriweather', serif; font-size: 8pt; color: #777; }</style><section><div style='text-align: right;'><span class='date'></span></div></section>",
+    "footerTemplate": "<style>section { font-family: 'Merriweather', serif; font-size: 8pt; color: #777; }</style><section><div style='text-align: center;'>Page <span class='pageNumber'></span> of <span class='totalPages'></span></div></section>"
+  }
 }

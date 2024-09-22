@@ -2,9 +2,15 @@ name: Convert README to PDF
 
 on:
   push:
-    paths:
-      - 'README.md'
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   convert_to_pdf:
@@ -12,32 +18,33 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          fetch-depth: 0 # Fetch all history for all branches and tags
 
-      - name: Install dependencies
+      - name: Install pandoc and texlive
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-liberation
-          npm install -g md-to-pdf
+          sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra texlive-xetex
 
       - name: Convert README to PDF
         run: |
-          md-to-pdf README.md --config-file pdf-config.json
-
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: FASF_Letter
-          path: README.pdf
+          pandoc README.md -o README.pdf --pdf-engine=xelatex -V geometry:"top=2cm, bottom=2cm, left=2cm, right=2cm" -V colorlinks=true -V linkcolor=blue -V urlcolor=blue -V toccolor=gray
 
       - name: Commit and push if changed
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.pdf
-          git commit -m "Update PDF version of README" -a || exit 0
-          git push
+            git config --local user.name "GitHub Action"
+            git add README.pdf
+            git commit -m "Update PDF version of README" -a || exit 0
+            if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+              echo "Skipping push for pull request"
+            else
+              git push
+            fi
+
+      - name: Upload PDF for pull requests
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: README_PDF
+          path: README.pdf
